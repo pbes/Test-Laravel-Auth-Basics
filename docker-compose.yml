@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: mysql:8
+    container_name: db
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
